@@ -22,7 +22,9 @@ fi
 # Git configuration for all users in container
 echo "Configuring git..."
 git config --global pull.rebase false
-git config --global pull.allowUnrelatedHistories true
+# Create Git alias for pulling from upstream with unrelated histories allowed
+git config --global alias.upstream "!git pull upstream main --allow-unrelated-histories --no-edit"
+
 
 echo "Setup complete!"
 

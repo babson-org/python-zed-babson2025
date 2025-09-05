@@ -1,9 +1,7 @@
 {
   "name": "Python Dev Environment",
   "image": "mcr.microsoft.com/devcontainers/python:3.10",
-  "features": {
-    "github-cli": "latest"
-  },
+  "features": { "github-cli": "latest" },
 
   "customizations": {
     "vscode": {
@@ -15,6 +13,7 @@
         "github.codespaces",
         "github.vscode-pull-request-github",
         "github.github-vscode-theme",
+        "ms-toolsai.jupyter",
         "esbenp.prettier-vscode",
         "ms-python.python",
         "ms-python.debugpy",
@@ -26,44 +25,23 @@
         "ritwickdey.LiveServer"
       ],
       "settings": {
-        // 🔒 Disable GitHub Copilot completely
-        "github.copilot.enable": {"*":false},
-        "github.copilot.inlineSuggest.enable": false,
-        "github.copilot.editor.enableAutoCompletions": false,
-        "chat.commandCenter.enabled": false, // Hide Copilot Chat UI (top bar + bottom bar)
-        "chat.agent.enabled": false,
-        "inlineChat.accessibleDiffView": "off",
-        "terminal.integrated.initialHint": false,
-
-        // 🐚 Terminal setup
         "terminal.integrated.profiles.linux": {
-          "bash": {
-            "path": "/bin/bash"
-          }
+          "bash": { "path": "/bin/bash" }
         },
         "terminal.integrated.defaultProfile.linux": "bash",
-
-        // 🐍 Python environment
         "python.terminal.activateEnvironment": true,
-        "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
-
-        // 📓 Jupyter behavior
-        "jupyter.enableAutoStart": false
+        "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python"
       }
     }
   },
 
   "remoteUser": "vscode",
-
-  // 🔁 Setup hooks
   "postCreateCommand": "bash .devcontainer/setup.sh",
   "postStartCommand": "bash .devcontainer/setup.sh",
 
-  // 🧼 Environment hygiene
   "containerEnv": {
     "PIP_DISABLE_PIP_VERSION_CHECK": "1"
   }
 }
-
 
 
