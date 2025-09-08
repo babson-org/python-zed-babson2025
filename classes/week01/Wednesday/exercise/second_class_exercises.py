@@ -1,15 +1,19 @@
 
 #1 print 'hello' 5 times using an arithmetic operator
-
+print ("Hello\n"*5)
 
 
 #2 print 'hello' 5 times using a loop
+for i in range(5):
+    print("hello")
+
 
 
 
 
 #3 print 'hello' 5 times on the same line using a loop
-
+for i in range(5):
+    print('hello', end=" ")
 
 
 
@@ -22,9 +26,16 @@
 
 '''
 
+for row in range(3):
+    for column in range(3):
+        print(str(row)+str(column), end= " ")
+    print()
+print()
+    
 #5 define txt and input some text from the keyboard into it
 
-
+txt = input("enter some text:")
+print("you entered", txt)
 
 
 
