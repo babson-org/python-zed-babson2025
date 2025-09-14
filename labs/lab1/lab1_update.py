@@ -22,7 +22,7 @@ def main():
 
 """
 Lab 1 - Python Basics
-Author: <Your Name>
+Author: <Zed Charania>
 Instructions: Complete each part below. Save your work and commit + sync in Codespaces.
 """
 
@@ -38,14 +38,32 @@ def draw_diamond():
     print("you have some work todo!, draw_diamond")
 
     # TODO: Prompt user for an odd number
-    height = int(input("Enter an odd number for the diamond height: "))
+    while True:
+        try:
+             height = int(input("Enter an odd number for the diamond height: "))
+             if height % 2 == 0 or height <=0:
+                 print("Enter a positive odd number.")
+                 continue
+             break
+        except ValueError:
+            print("Your input is not correct, Please enter an integer")
 
     # TODO: Draw the top half of the diamond
+    mid = height // 2
 
+    for i in range(mid + 1):
+        space = " " * (mid - i)
+        stars = "*" * (2 * i + 1)
+        print(space + stars)
     # TODO: Draw the bottom half of the diamond
 
+    for i in range(mid - 1, -1, -1):
+        space = " " * (mid - i)
+        stars = "*" * (2 * i + 1)
+        print (space + stars)
+
 # Uncomment to test Part 1
-# draw_diamond()
+draw_diamond()
 
 
 # ==============================
@@ -67,18 +85,25 @@ def text_analysis():
 
     # TODO: Count letters
     letters = 0
+    for let in text:
+        if let.isalpha():
+            letters += 1
 
     # TODO: Count words
-
+    word_list = text.split()
+    word = len(word_list)
     # TODO: Count sentences
-
+    sentences = 0
+    for let in text:
+     if let == '.' or let == '!' or let == '?':
+        sentences += 1
     # TODO: Print the results
     print(f"Letters: {letters}")
-    print(f"Words: {0}")        # replace 0
-    print(f"Sentences: {0}")    # replace 0
+    print(f"Words: {1}")        # replace 0
+    print(f"Sentences: {1}")    # replace 0
 
 # Uncomment to test Part 2
-# text_analysis()
+text_analysis()
 
 
 # ==============================
