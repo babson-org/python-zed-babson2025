@@ -1,35 +1,40 @@
-def text_analysis():
+def caesar_cipher():
     """
-    Ask the user for a block of text.
-    Count and display:
-        - Number of letters (only count a-zA-Z)
-        - Number of words   (use split())
-        - Number of sentences (., ?, !) 
+    Ask the user for text and a shift value.
+    Provide options to encrypt or decrypt the text using a Caesar cipher.
     """
 
-    print("you have some work todo!, text_analysis")
+    print("you have some work todo!, caesar_cypher")
 
-    # TODO: Get user input
-    text = input("Enter some text: ")
+    # TODO: Get user input text
+    text = input("Enter text: ")
 
-    # TODO: Count letters
-    letters = 0
-    for let in text:
-        if let.isalpha():
-            letters += 1
+    # TODO: Get shift value
+    shift = int(input("Enter shift value (integer): "))
 
-    # TODO: Count words
-    word_list = text.split()
-    word = len(word_list)
-    # TODO: Count sentences
-    sentences = 0
-    for let in text:
-     if let == '.' or let == '!' or let == '?':
-        sentences += 1
-    # TODO: Print the results
-    print(f"Letters: {letters}")
-    print(f"Words: {1}")        # replace 0
-    print(f"Sentences: {1}")    # replace 0
+    # TODO: Ask user whether to encrypt or decrypt
+    choice = input("Type 'e' to encrypt or 'd' to decrypt: ").lower()
 
-# Uncomment to test Part 2
-text_analysis()
+    # TODO: Implement encryption and decryption logic
+
+    #reverses the shift if d is selected
+    if choice == 'd':
+        shift = -shift
+    result = ""
+    for char in text:
+        if char.isalpha():
+            if char.islower():
+                posi = ord(char) - ord('a') 
+                result += chr((posi + shift) % 26 + ord('a'))
+            else:
+                posi = ord((char) - ord('A'))
+                result += chr((posi + shift) % 26 + ord('A'))
+        else:
+            result += char
+
+
+    # TODO: Print the final result
+    print("Result:", result)
+
+# Uncomment to test Part 3
+caesar_cipher()

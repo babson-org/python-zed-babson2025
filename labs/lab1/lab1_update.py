@@ -38,6 +38,7 @@ def draw_diamond():
     print("you have some work todo!, draw_diamond")
 
     # TODO: Prompt user for an odd number
+    #Keeps user input valid and asks again until input is valid
     while True:
         try:
              height = int(input("Enter an odd number for the diamond height: "))
@@ -127,13 +128,29 @@ def caesar_cipher():
     choice = input("Type 'e' to encrypt or 'd' to decrypt: ").lower()
 
     # TODO: Implement encryption and decryption logic
+
+    #reverses the shift if d is selected
+    if choice == 'd':
+        shift = -shift
     result = ""
+    for char in text:
+        if char.isalpha():
+            if char.islower():
+                posi = ord(char) - ord('a') 
+                result += chr((posi + shift) % 26 + ord('a'))
+            else:
+                posi = ord((char) - ord('A'))
+                result += chr((posi + shift) % 26 + ord('A'))
+        else:
+            #keeps the same formatting
+            result += char 
+
 
     # TODO: Print the final result
     print("Result:", result)
 
 # Uncomment to test Part 3
-# caesar_cipher()
+caesar_cipher()
 
 
 
