@@ -87,7 +87,7 @@ def create_transaction(next_id, type, shares,symbol, name, price):
     }
 
 
-def input_client(next_id, clients):
+def input_client(clients):
     """Gather client input (name + cash) and add to clients list."""
     fname = input('Please enter your first name: ')
     lname = input('Please enter your last name: ')
@@ -106,6 +106,8 @@ def input_client(next_id, clients):
             if cash > 0:
                 break
             txt = 'Please enter a positive number for cash: '
+
+    next_id = get_next_id(clients)
 
     client = {
         'id': next_id,
@@ -162,8 +164,7 @@ def display_menu(menu_items):
 
 # ---------- Main Flow ----------
 def main():
-    clients = load_clients()
-    next_id = get_next_id(clients)
+    clients = load_clients()    
 
     
     while True:
@@ -175,7 +176,7 @@ def main():
             exit()
         elif choice == 1:  # Create client
             while True:
-                choice = input_client(next_id, clients)
+                choice = input_client(clients)
                 if choice == None:
                     print('return to previous menu')
                     break
