@@ -47,14 +47,13 @@ for i in range(3):
 print()
 
 # nested comprehension (a list of lists)
-[[print(f'{i}{j}') for i in range(3) if i % 2 == 0] for j in range(4) if j % 2 == 1]
-
-
-
-
-
-    
+[[print(f'{i}{j}') for i in range(3) if i % 2 == 0] for j in range(4) if j % 2 == 1]    
 
 
 rows = [[f"{i}{j} " for j in range(4)] for i in range(3)]
 print(rows)
+
+ml = ['a', 1, 'c']
+
+s = ''.join(str(item) for item in ml)
+print(s)

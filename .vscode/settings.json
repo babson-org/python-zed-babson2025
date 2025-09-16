@@ -39,6 +39,10 @@
   "files.watcherExclude": {
       "**/tempCodeRunnerFile.py": true
   },
+  
+  "search.exclude": {
+    "**/tempCodeRunnerFile.py": true
+  },
 
   // ??? Editor UI preferences
   "editor.minimap.showSlider": "mouseover",
