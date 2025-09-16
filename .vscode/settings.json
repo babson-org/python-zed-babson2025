@@ -30,16 +30,22 @@
     "**/.history": true,
     "**/.vscode": true,
     "**/.git": true,
-    "**/misc": true,
-    "**/tempCodeRunnerFile.py": true,
+    "**/misc": true,    
     "**/default_code": true
+  },
+  
+  "files.watcherExclude": {
+      "**/tempCodeRunnerFile.py": true
   },
 
   // ??? Editor UI preferences
   "editor.minimap.showSlider": "mouseover",
 
   // ?? Code Runner execution settings
-  "code-runner.runInTerminal": true
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+     "python": "python -u"
+  }
 }
 
 
