@@ -45,7 +45,7 @@
   },
   
   // ?? Notebook settings
-    "notebook.showToolbar": false,
+   
     "notebook.globalToolbarLocation": "hidden",
   
 
