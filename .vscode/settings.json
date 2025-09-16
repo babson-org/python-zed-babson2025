@@ -47,7 +47,7 @@
   
    
     // ?? Notebook settings
-    "notebook.globalToolbar": "false",
+    "notebook.globalToolbar": false,
     
     "notebook.cellToolbarVisibility": "hidden",   // hides the little run/+ buttons on each cell
 
