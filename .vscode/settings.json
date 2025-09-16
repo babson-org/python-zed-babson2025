@@ -47,8 +47,8 @@
   
    
     // ?? Notebook settings
-    "notebook.globalToolbar": "hidden",
-    "notebook.globalToolbarLocation": "bottom",   // optional: if you want it moved instead
+    "notebook.globalToolbar": "false",
+    
     "notebook.cellToolbarVisibility": "hidden",   // hides the little run/+ buttons on each cell
 
   
