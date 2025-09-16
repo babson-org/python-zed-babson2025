@@ -46,6 +46,11 @@
 
   // ??? Editor UI preferences
   "editor.minimap.showSlider": "mouseover",
+  
+  // ?? Tab / Editor behavior
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.tabCloseButton": "right",
 
   // ?? Code Runner execution settings
   "code-runner.runInTerminal": true,
