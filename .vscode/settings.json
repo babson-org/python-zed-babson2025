@@ -22,6 +22,7 @@
 
   // ?? Explorer sorting and file exclusions
   "explorer.sortOrder": "filesFirst",
+  "explorer.excludeGitIgnore": true,
   "files.exclude": {
     "**/__pycache__": true,
     "**/*.pyc": true,
@@ -30,7 +31,8 @@
     "**/.history": true,
     "**/.vscode": true,
     "**/.git": true,
-    "**/misc": true,    
+    "**/misc": true, 
+    "**/tempCodeRunnerFile.py": true,
     "**/default_code": true
   },
   
