@@ -52,7 +52,7 @@ def load_clients():
 
 def save_clients(clients):
     """Save clients to JSON file."""
-    print(CLIENTS_JSON_FILE)
+    #print(CLIENTS_JSON_FILE)
     with open(CLIENTS_JSON_FILE, "w") as file:
         json.dump(clients, file, indent=4)
 
@@ -125,7 +125,7 @@ def select_client(clients):
 
 
     if not clients:
-        print('You have no clients, please create 1 first before selecting')
+        print('You have no clients, please create 1 first before selecting (select_client())')
         return None
 
     menu_items = []
@@ -142,7 +142,7 @@ def select_client(clients):
 # ---------- Menu Handling ----------
 def display_menu(menu_items):
     """Display a menu and return a valid integer choice."""
-    txt = 'Select menu item: '
+    txt = 'Select menu item (display_menu()): '
     while True:
         print('\n\n\n')
         for idx, item in enumerate(menu_items, start=1):
@@ -155,43 +155,42 @@ def display_menu(menu_items):
         except ValueError:
             if item_no == '':                
                 return None
-            txt = 'Please select an integer item: '
+            txt = 'Please select an integer item (display_menu()): '
         else:
             if 1 <= item_no <= len(menu_items):
                 return item_no
             else:
-                txt = f'Enter an integer between 1 and {len(menu_items)}: '
+                txt = f'Enter an integer between 1 and {len(menu_items)} (display_menu()): '
 
 # ---------- Main Flow ----------
 def main():
-    clients = load_clients()    
-
+    clients = load_clients()   
     
     while True:
         menu_items = ('Create client', 'Select client')
         choice = display_menu(menu_items)
 
         if choice == None:
-            print('exit system')
+            print('exit system 00')
             exit()
         elif choice == 1:  # Create client
             while True:
                 choice = input_client(clients)
                 if choice == None:
-                    print('return to previous menu')
+                    print('return to previous menu 1-00')
                     break
                 else:
                     new_client = choice
-                    print(f"Client {new_client['fname']} {new_client['lname']} created.")
+                    print(f"Client {new_client['fname']} {new_client['lname']} created. 1-01")
                     break  # break now out of top loop but go to sc 1 later
         elif choice == 2:            
             while True:
                 choice = select_client(clients)                
                 if choice == None:
-                    print('RETURN TO PREVIOUS MENU')
+                    print('return to previous menu 2-00')
                     break
                 else:
-                    print('go to s1')
+                    print('go to s1 2-01')
                     break  # break now out of top loop but go to sc 1 later
 
         
