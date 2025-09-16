@@ -46,8 +46,8 @@
   
   // ?? Notebook settings
     "notebook.showToolbar": false,
-    "notebook.globalToolbarLocation": "hidden"
-  },
+    "notebook.globalToolbarLocation": "hidden",
+  
 
   // ??? Editor UI preferences
   "editor.minimap.showSlider": "mouseover",
