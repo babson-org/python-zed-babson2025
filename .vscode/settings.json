@@ -43,6 +43,11 @@
   "search.exclude": {
     "**/tempCodeRunnerFile.py": true
   },
+  
+  // ?? Notebook settings
+    "notebook.showToolbar": false,
+    "notebook.globalToolbarLocation": "hidden"
+  },
 
   // ??? Editor UI preferences
   "editor.minimap.showSlider": "mouseover",
