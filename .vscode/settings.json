@@ -48,7 +48,7 @@
    
     // ?? Notebook settings
     "notebook.globalToolbar": false,
-    
+    "jupyter.globalToolbar": false,    
     "notebook.cellToolbarVisibility": "hidden",   // hides the little run/+ buttons on each cell
 
   
