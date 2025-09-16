@@ -45,6 +45,7 @@
 
   // ?? Code Runner execution settings
   "code-runner.runInTerminal": true,
+  "code-runner.ignoreSelection": true,
   "code-runner.executorMap": {
      "python": "python -u"
   }
