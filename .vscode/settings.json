@@ -1,5 +1,5 @@
 {
-  // 🔒 Disable GitHub Copilot completely
+  // ?? Disable GitHub Copilot completely
   "github.copilot.enable": {"*":false},
   "github.copilot.inlineSuggest.enable": false,
   "github.copilot.editor.enableAutoCompletions": false,
@@ -8,11 +8,11 @@
   "inlineChat.accessibleDiffView": "off",
   "terminal.integrated.initialHint": false,
 
-  // 🧾 Git display and behavior
+  // ?? Git display and behavior
   "git.showUntrackedFiles": true,
   "git.untrackedChanges": "mixed",
 
-  // 🐍 Python interpreter and terminal activation
+  // ?? Python interpreter and terminal activation
   "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
   "python.terminal.activateEnvironment": true,
   "python.analysis.extraPaths": [
@@ -20,25 +20,56 @@
     "/workspaces/python_class/labs/lab2/default_code"
   ],
 
-  // 📁 Explorer sorting and file exclusions
+  // ?? Explorer sorting and file exclusions
   "explorer.sortOrder": "filesFirst",
+  "explorer.excludeGitIgnore": true,
   "files.exclude": {
-   // "**/__pycache__": true,
-   //S "**/*.pyc": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true,
     "**/venv": true,
     "**/.devcontainer": true,
     "**/.history": true,
     "**/.vscode": true,
     "**/.git": true,
-    "**/misc": true,
+    "**/misc": true, 
+    "**/tempCodeRunnerFile.py": true,
     "**/default_code": true
   },
+  
+  "files.watcherExclude": {
+      "**/tempCodeRunnerFile.py": true
+  },
+  
+  "search.exclude": {
+    "**/tempCodeRunnerFile.py": true
+  },
+  
+  
+   
+    // ?? Notebook settings
+    "notebook.globalToolbar": false,
+    "jupyter.globalToolbar": false,    
+    "notebook.cellToolbarVisibility": "hidden",   // hides the little run/+ buttons on each cell
 
-  // 🗺️ Editor UI preferences
+  
+
+  // ??? Editor UI preferences
   "editor.minimap.showSlider": "mouseover",
+  
+  // ?? Tab / Editor behavior
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.tabCloseButton": "right",
+    "workbench.editor.showTabs": true,
 
-  // ▶️ Code Runner execution settings
-  "code-runner.runInTerminal": true
+
+  // ?? Code Runner execution settings
+  "code-runner.runInTerminal": true,
+  "code-runner.ignoreSelection": true,
+  "code-runner.executorMap": {
+     "python": "python -u"
+  },
+  "workbench.editor.tabActionLocation": "right"
 }
 
 
