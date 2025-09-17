@@ -1,0 +1,19 @@
+[
+    {
+        "id": null,
+        "fname": "Bob",
+        "lname": "Cross",
+        "positions": [],
+        "transactions": [
+            {
+                "id": null,
+                "timestamp": "20250917-144639",
+                "type": "CONTRIBUTION",
+                "shares": 100000.0,
+                "symbol": "$$$$",
+                "name": "Cash",
+                "trn_price": 1.0
+            }
+        ]
+    },
+]

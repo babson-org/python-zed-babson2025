@@ -32,7 +32,7 @@ How do we store our data?
 
 import json
 import os
-from datetime import datetime
+from datetime import datetime 
 
 CLIENTS_JSON_FILE = 'portfolio/clients.json'
 
