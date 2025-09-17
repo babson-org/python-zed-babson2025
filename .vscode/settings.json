@@ -44,10 +44,14 @@
     "**/tempCodeRunnerFile.py": true
   },
   
-  // ?? Notebook settings
-    "notebook.showToolbar": false,
-    "notebook.globalToolbarLocation": "hidden"
-  },
+  
+   
+    // ?? Notebook settings
+    "notebook.globalToolbar": false,
+    "jupyter.globalToolbar": false,    
+    "notebook.cellToolbarVisibility": "hidden",   // hides the little run/+ buttons on each cell
+
+  
 
   // ??? Editor UI preferences
   "editor.minimap.showSlider": "mouseover",
@@ -64,7 +68,8 @@
   "code-runner.ignoreSelection": true,
   "code-runner.executorMap": {
      "python": "python -u"
-  }
+  },
+  "workbench.editor.tabActionLocation": "right"
 }
 
 
