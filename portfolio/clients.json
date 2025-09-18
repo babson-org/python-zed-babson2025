@@ -1,19 +1,27 @@
 [
     {
-        "id": null,
+        "id": 1,
         "fname": "Bob",
-        "lname": "Cross",
-        "positions": [],
+        "lname": "Smith",
+        "positions": [
+            {
+                "id": 1,
+                "shares": 100000.04,
+                "symbol": "$$$$",
+                "name": "Cash",
+                "avg_cost": 100000.04
+            }
+        ],
         "transactions": [
             {
-                "id": null,
-                "timestamp": "20250917-144639",
+                "id": 1,
+                "timestamp": "20250918-175822",
                 "type": "CONTRIBUTION",
-                "shares": 100000.0,
+                "shares": 100000.04,
                 "symbol": "$$$$",
                 "name": "Cash",
                 "trn_price": 1.0
             }
         ]
-    },
+    }
 ]
