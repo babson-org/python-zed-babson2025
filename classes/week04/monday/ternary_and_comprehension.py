@@ -11,10 +11,10 @@ x = 7
 y = 5
 
 print(x,y)
-if x > y:
-    temp = x
-    x = y
-    y = temp
+
+temp = x
+x = y
+y = temp
 print(x,y)
 
 x,y = y,x
