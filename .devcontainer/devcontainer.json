@@ -60,7 +60,7 @@
   "remoteUser": "vscode",
 
   // ?? Setup hooks
-  "postCreateCommand": "pip install nbstripout && nbstripout --install --attributes && bash .devcontainer/setup.sh",
+  "postCreateCommand": "pip install nbstripout && nbstripout --install --attributes .gitattributes && bash .devcontainer/setup.sh",
   "postStartCommand": "bash .devcontainer/setup.sh",
 
   // ?? Environment hygiene
