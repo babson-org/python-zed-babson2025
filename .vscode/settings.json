@@ -31,6 +31,9 @@
     "**/.history": true,
     "**/.vscode": true,
     "**/.git": true,
+    "**/.gitignore": true,
+    "**/.gitattributes": true,
+    "**/.nbstripout.json": true,
     "**/misc": true, 
     "**/tempCodeRunnerFile.py": true,
     "**/default_code": true
