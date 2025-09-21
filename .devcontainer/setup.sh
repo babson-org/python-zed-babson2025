@@ -24,7 +24,7 @@ echo "Configuring git..."
 git config --global pull.rebase false
 
 # Alias 1: First-time only, stitches histories together
-git config --global alias.upstream "!git pull upstream main --allow-unrelated-histories --no-edit"
+git config --global alias.upstream-once "!git pull upstream main --allow-unrelated-histories --no-edit"
 
 # Alias 2: Ongoing use, keeps teacher’s copy in original filename
 # and saves student’s conflicted version as <filename>.studentcopy
