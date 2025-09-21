@@ -35,17 +35,17 @@
     "**/.gitattributes": true,
     "**/.nbstripout.json": true,
     "**/misc": true, 
-    "**/tempCodeRunnerFile.py": true,
+    "**/tempCodeRunnerFile.*": true,
     "**/default_code": true
   },
   
   "files.watcherExclude": {
       "**/.gitignore": true,
-      "**/tempCodeRunnerFile.py": true
+      "**/tempCodeRunnerFile.*": true
   },
   
   "search.exclude": {
-    "**/tempCodeRunnerFile.py": true
+    "**/tempCodeRunnerFile.*": true
   },
   
   
