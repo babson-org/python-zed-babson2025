@@ -40,6 +40,7 @@
   },
   
   "files.watcherExclude": {
+      "**/.gitignore": true,
       "**/tempCodeRunnerFile.py": true
   },
   
