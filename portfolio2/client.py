@@ -36,7 +36,7 @@ import csv
 from datetime import datetime 
 from decimal import Decimal, ROUND_HALF_UP
 
-CLIENTS_JSON_FILE = 'portfolio/clients.json'
+CLIENTS_JSON_FILE = 'portfolio/z_clients.json'
 
 # ---------- File Handling ----------
 def load_clients():
@@ -247,7 +247,7 @@ from pprint import pprint
 def get_tickers():
     tickers = {}
 
-    with open("portfolio/ticker.data", newline="", encoding="utf-8") as f:
+    with open("portfolio/z_ticker.data", newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:            
             ticker = row["Ticker"]
