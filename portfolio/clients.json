@@ -82,5 +82,39 @@
                 "trn_price": 1.0
             }
         ]
+    },
+    {
+        "id": 4,
+        "fname": "qwe",
+        "lname": "asd",
+        "positions": [
+            {
+                "id": 4,
+                "shares": 300500.0,
+                "symbol": "$$$$",
+                "name": "Cash",
+                "avg_cost": 1.0
+            }
+        ],
+        "transactions": [
+            {
+                "id": 4,
+                "timestamp": "20250923-142545",
+                "type": "CONTRIBUTION",
+                "shares": 200500.0,
+                "symbol": "$$$$",
+                "name": "Cash",
+                "trn_price": 1.0
+            },
+            {
+                "id": 4,
+                "timestamp": "20250923-143600",
+                "type": "CONTRIBUTION",
+                "shares": 50000.0,
+                "symbol": "$$$$",
+                "name": "Cash",
+                "trn_price": 1.0
+            }
+        ]
     }
 ]
