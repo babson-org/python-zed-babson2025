@@ -36,7 +36,7 @@ import csv
 from datetime import datetime 
 from decimal import Decimal, ROUND_HALF_UP
 
-CLIENTS_JSON_FILE = 'portfolio/clients.json'
+CLIENTS_JSON_FILE = 'portfolio/z_clients.json'
 
 # ---------- File Handling ----------
 def load_clients():
@@ -215,10 +215,7 @@ def contribution_input(active_client, clients):
         except ValueError:
             txt = 'Please enter a dollar amount: '
         else:
-            if shares <= 0:
-                txt = 'Please input a positive amount: '
-            else:
-                break
+            break
       
     
     create_transaction(active_client['id'], 'CONTRIBUTION', shares, '$$$$', 'Cash', 1.00, active_client)    
@@ -250,7 +247,7 @@ from pprint import pprint
 def get_tickers():
     tickers = {}
 
-    with open("portfolio/ticker.data", newline="", encoding="utf-8") as f:
+    with open("portfolio/z_ticker.data", newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:            
             ticker = row["Ticker"]
