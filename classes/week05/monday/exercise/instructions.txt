@@ -10,3 +10,5 @@ valid tickers for purchase are in the file ticker.data
 For now, ask user for ticker, shares and transaction price
 make sure the portfolio has enough cash on hand for the purchase
 
+Do not try to run your code!  Make a good faith effort, you may work in groups
+of 3 or less. Spend 1 1/2 to 3 hours on this.
