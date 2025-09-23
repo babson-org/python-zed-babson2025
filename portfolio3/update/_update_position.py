@@ -15,6 +15,6 @@ def _update_position(active_client, transaction):
             'name': transaction['name'],
             'avg_cost': transaction['trn_price']}
 
-            active_client.append(position)    # or client['positions].append(position)
+            active_client['positions'].append(position)    # or client['positions].append(position)
 
     return
