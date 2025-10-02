@@ -45,7 +45,7 @@
     "**/tempCodeRunnerFile.*": true
   },
   "openInExternalApp.apps": {
-    ".pptx": "cmd /c start"
+    ".pptx": "cmd /c start \"\""
   },
   // ?? Notebook settings
   "notebook.globalToolbar": false,
