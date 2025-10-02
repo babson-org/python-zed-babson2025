@@ -26,6 +26,7 @@
         "ms-toolsai.jupyter",
         "ms-python.vscode-pylance",
         "ms-toolsai.jupyter-keymap",
+        "yutengjing.open-in-external-app",
         "ms-toolsai.jupyter-renderers"
       ],
       "settings": {
