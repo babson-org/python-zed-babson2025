@@ -17,8 +17,13 @@
   "python.terminal.activateEnvironment": true,
   "python.analysis.extraPaths": [
     "/workspaces/python_class/labs/lab2/student_code",
-    "/workspaces/python_class/labs/lab2/default_code"
+    "/workspaces/python_class/labs/lab2/default_code",
+    "/workspaces/python_class"
   ],
+  "python.autoComplete.extraPaths": [
+    "/workspaces/python_class"
+  ],
+  "python.envFile": "${workspaceFolder}/.env",
   // ?? Explorer sorting and file exclusions
   "explorer.sortOrder": "filesFirst",
   "explorer.excludeGitIgnore": false,
