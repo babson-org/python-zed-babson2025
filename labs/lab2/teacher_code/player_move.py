@@ -2,7 +2,7 @@ def player_move(board: list[int], score: dict[str, int]):
     """
     Prompts the player to choose a valid move.
     """
-    prompt = 'Select an empty cell (1-9): '
+    prompt = 'Select an empty cell (1–9): '
     while True:
         try:
             move = int(input(prompt))
@@ -11,5 +11,5 @@ def player_move(board: list[int], score: dict[str, int]):
             break
         except ValueError:
             prompt = 'Invalid. Try again with an empty cell index (1–9): '
-
-    board[move - 1] = score['player']
+    
+    board[move - 1] = score['player']    
