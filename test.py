@@ -9,7 +9,6 @@ email = 'spinkerton@babson.edu'
 international = False
 
 '''
-
 student = []
 
 
