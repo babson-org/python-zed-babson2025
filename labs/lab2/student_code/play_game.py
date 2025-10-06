@@ -82,7 +82,7 @@ def play_game():
     player_win = 30
 
     # Set difficulty: False = easy (random AI), True = hard (minimax AI).
-    play_hard = True  # TODO: Change to False once ai_move.py is ready.
+    play_hard = False  # TODO: Change to False once ai_move.py is ready.
 
     # Clear the screen to start fresh.
     clear_screen()

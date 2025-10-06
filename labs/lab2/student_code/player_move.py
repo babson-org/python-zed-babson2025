@@ -10,13 +10,22 @@ def player_move(board: list[int], score: dict[str, int]):
     prompt = "Select an empty cell (1-9): "
     while True:
         try:
-            # TODO: Convert input to integer
-            # TODO: Validate move is in range and not taken
-            pass
+            move = int(input(prompt))
+            #between 1 and 9
+            if move < 1 or move > 9:
+                raise ValueError
+            idx = move -1
+
+            #checks if spot is filled
+            if board[idx] == 10 or board[idx] == -10:
+                prompt = "Spot is filled. Try again"
+                continue
+            board[idx] = score['player']
+            break
+
+    
+            
         except ValueError:
             prompt = "Invalid input. Try again (1-9): "
             
-    # TODO: Assign score['player'] to the selected cell on the board
-    # HINT: remember the board moves are 1 - 9 but the board indices are
-    # 0 - 8
-pass
+   

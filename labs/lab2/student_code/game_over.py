@@ -8,11 +8,14 @@ def game_over(board: list[int]):
         Returns True if the game has a winner or no remaining moves, False otherwise.
     """
     
-    # TODO: Check if all cells are filled (abs(cell) == 10)
-    # TODO: Use calc_score to check if someone has won
-    # TODO: Return True if game over, otherwise False
-    pass
+    if calc_score(board) != 0:
+        return True
 
+    filled = all(abs(cell) == 10 for cell in board)
+    return filled
+
+
+   
     
 
 
