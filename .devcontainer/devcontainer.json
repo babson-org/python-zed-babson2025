@@ -2,14 +2,14 @@
   "name": "Python Dev Environment",
   "image": "mcr.microsoft.com/devcontainers/python:3.10-bullseye",
 
-  // ?? Core features
+  
   "features": {
     "github-cli": "latest"
   },
 
   "customizations": {
     "vscode": {
-      // ?? Only essential non-AI extensions
+      
       "extensions": [
         "bierner.emojisense",
         "michaelCurrin.auto-commit-msg",
@@ -17,24 +17,23 @@
         "ms-python.black-formatter",
         "github.codespaces",
         "github.vscode-pull-request-github",
-        "github.github-vscode-theme",
-        "ms-python.python",
-        "ms-python.debugpy",
-        "ericsia.pythonsnippets3",
+        "github.github-vscode-theme",        
+        "ms-python.python@latest",        
+        "ms-python.debugpy",        
         "ms-vscode.remote-repositories",
         "emmanuelbeziat.vscode-great-icons",
         "mathematic.vscode-pdf",
-        "ritwickdey.LiveServer",
-        "ms-toolsai.jupyter",
-        "ms-python.vscode-pylance",
+        "ritwickdey.LiveServer",        
+        "ms-toolsai.jupyter@latest",        
+        "ms-python.vscode-pylance@latest",        
         "ms-toolsai.jupyter-keymap",
         "yutengjing.open-in-external-app",
         "ms-toolsai.jupyter-renderers"
       ],
 
-      // ?? Settings: AI/Telemetry fully disabled + Python tuned
+      
       "settings": {
-        // ?? Disable all Copilot & Chat
+        
         "github.copilot.enable": { "*": false },
         "github.copilot.inlineSuggest.enable": false,
         "github.copilot.editor.enableAutoCompletions": false,
@@ -55,28 +54,28 @@
           "strings": false
         },
 
-        // ?? Block telemetry + auto-AI reinstalls
+        
         "telemetry.enableTelemetry": false,
         "telemetry.enableCrashReporter": false,
         "telemetry.telemetryLevel": "off",
         "github.telemetry.enabled": false,
         "workbench.enableExperiments": false,
-        "extensions.autoUpdate": false,
+        "extensions.autoUpdate": true,
         "extensions.autoCheckUpdates": false,
         "extensions.ignoreRecommendations": true,
 
-        // ?? Python environment
+        
         "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
         "python.terminal.activateEnvironment": true,
         "python.analysis.extraPaths": ["${workspaceFolder}"],
         "python.formatting.provider": "black",
         "editor.formatOnSave": true,
 
-        // ?? Jupyter & Notebook
+        
         "jupyter.askForKernelRestart": false,
-        "jupyter.enableAutoStart": false,
+        "jupyter.enableAutoStart": true,
 
-        // ?? Terminal defaults
+       
         "terminal.integrated.profiles.linux": {
           "bash": { "path": "/bin/bash" }
         },
@@ -85,17 +84,18 @@
     }
   },
 
-  // ?? Default user
+  
   "remoteUser": "vscode",
 
-  // ?? Post-creation setup
-  "postCreateCommand": "pip install nbstripout && nbstripout --install --attributes .gitattributes && bash .devcontainer/setup.sh",
+  
+  
+  "postCreateCommand": "pip install --upgrade pip && pip install ipykernel jupyter nbstripout && nbstripout --install --attributes .gitattributes && bash .devcontainer/setup.sh",
 
-  // ?? Environment variables
+ 
   "containerEnv": {
     "PIP_DISABLE_PIP_VERSION_CHECK": "1"
   },
 
-  // ?? Safety: do not run experimental commands automatically
+  
   "overrideCommand": true
 }

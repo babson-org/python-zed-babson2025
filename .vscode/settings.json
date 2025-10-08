@@ -1,7 +1,5 @@
 {
-  // ================================================================
-  // ?? SECURITY & PRIVACY — Disable all Copilot, Chat, and Telemetry
-  // ================================================================
+  
   "github.copilot.enable": { "*": false },
   "github.copilot.inlineSuggest.enable": false,
   "github.copilot.editor.enableAutoCompletions": false,
@@ -30,9 +28,7 @@
   "extensions.autoCheckUpdates": false,
   "extensions.ignoreRecommendations": true,
 
-  // ==========================================
-  // ?? PYTHON — Environment, Analysis, Formatting
-  // ==========================================
+  
   "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
   "python.terminal.activateEnvironment": true,
   "python.analysis.extraPaths": [
@@ -47,33 +43,25 @@
   "python.formatting.provider": "black",
   "editor.formatOnSave": true,
 
-  // ===========================
-  // ?? JUPYTER — Classic behavior only
-  // ===========================
+  
   "notebook.globalToolbar": false,
   "jupyter.globalToolbar": false,
   "notebook.cellToolbarVisibility": "hover",
   "jupyter.askForKernelRestart": false,
-  "jupyter.enableAutoStart": false,
+  "jupyter.enableAutoStart": true,
 
-  // ========================================
-  // ?? TERMINAL — Defaults & user experience
-  // ========================================
+  
   "terminal.integrated.initialHint": false,
   "terminal.integrated.profiles.linux": {
     "bash": { "path": "/bin/bash" }
   },
   "terminal.integrated.defaultProfile.linux": "bash",
 
-  // ==============================
-  // ?? GIT — Display & behavior
-  // ==============================
+  
   "git.showUntrackedFiles": true,
   "git.untrackedChanges": "mixed",
 
-  // ==================================
-  // ??? EXPLORER & FILE VISIBILITY
-  // ==================================
+  
   "explorer.sortOrder": "filesFirst",
   "explorer.excludeGitIgnore": false,
   "files.exclude": {
@@ -99,9 +87,7 @@
     "**/tempCodeRunnerFile.*": true
   },
 
-  // ======================================
-  // ?? EDITOR & WORKBENCH APPEARANCE
-  // ======================================
+  
   "editor.minimap.showSlider": "mouseover",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -110,24 +96,18 @@
   "workbench.editor.tabActionLocation": "right",
   "workbench.startupEditor": "none",
 
-  // =================================
-  // ?? CODE RUNNER — Use Terminal
-  // =================================
+  
   "code-runner.runInTerminal": true,
   "code-runner.ignoreSelection": true,
   "code-runner.executorMap": {
     "python": "python -u"
   },
 
-  // ===========================
-  // ?? LIVE SHARE — Classroom defaults
-  // ===========================
+  
   "liveshare.guestReadOnly": true,
   "liveshare.guestApprovalRequired": true,
 
-  // ===========================
-  // ?? EXTERNAL APP HANDLERS
-  // ===========================
+  
   "openInExternalApp.apps": {
     ".pptx": "cmd /c start \"\""
   }
