@@ -33,8 +33,12 @@ if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
 fi
 
 # Ensure nbstripout filter is set in local repo config
-git config --local filter.nbstripout.clean "$(pwd)/venv/bin/python -m nbstripout"
-git config --local filter.nbstripout.smudge "$(pwd)/venv/bin/python -m nbstripout"
+GIT_ROOT=$(git rev-parse --show-toplevel)
+VENV_PYTHON="$GIT_ROOT/venv/bin/python"
+
+git config --local filter.nbstripout.clean "$VENV_PYTHON -m nbstripout"
+git config --local filter.nbstripout.smudge "$VENV_PYTHON -m nbstripout"
+
 
 # Optional custom setup
 if [ -f .devcontainer/setup.sh ]; then
