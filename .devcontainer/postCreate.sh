@@ -20,10 +20,11 @@ venv/bin/python -m ipykernel install --user --name=venv --display-name "Python (
 # Register nbstripout filter only if inside a Git repo
 if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
   echo "Installing nbstripout Git filter locally..."
-  venv/bin/nbstripout --install --attributes .gitattributes
   echo "*.ipynb filter=nbstripout" > .gitattributes
-else
-  echo "Not a Git repository yet — nbstripout will activate automatically after first commit or clone."
+
+  # Explicitly configure Git to use venv's Python for nbstripout
+  git config filter.nbstripout.clean "venv/bin/python -m nbstripout"
+  git config filter.nbstripout.smudge "venv/bin/python -m nbstripout"
 fi
 
 # Mark workspace as safe
