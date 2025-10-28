@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 
 """
 Run the Minesweeper game **from bytecode only**.
@@ -18,6 +18,9 @@ import os
 import sys
 import importlib.abc
 import importlib.machinery
+
+os.environ["TERM"] = "xterm"
+
 
 # --- Paths -------------------------------------------------------------------
 GAME_DIR = os.path.dirname(__file__)
