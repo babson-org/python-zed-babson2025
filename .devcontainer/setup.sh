@@ -26,8 +26,8 @@ git config --global pull.rebase false
 # Alias 1: First-time only, stitches histories together
 git config --global alias.upstream-once "!git pull upstream main --allow-unrelated-histories --no-edit"
 
-# Alias 2: Ongoing use, keeps teacher’s copy in original filename
-# and saves student’s conflicted version as <filename>.studentcopy
+# Alias 2: Ongoing use, keeps teacherï¿½s copy in original filename
+# and saves studentï¿½s conflicted version as <filename>.studentcopy
 git config --global alias.upstream-save '!f() { \
   git fetch upstream main && \
   git merge --no-edit upstream/main || true; \
@@ -67,3 +67,5 @@ echo "? Setup complete!"
 echo "??  First time only, run: git upstream-once"
 echo "??  Ongoing updates: git upstream-save"
 echo "??  Full environment + code sync: git update-class"
+
+
