@@ -1,4 +1,5 @@
-#!/usr/bin/env python3
+#!/usr/bin/env bash
+
 """
 Run the Minesweeper game **from bytecode only**.
 
