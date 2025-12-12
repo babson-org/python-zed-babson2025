@@ -1,0 +1,53 @@
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+!labs/lab3/GAME_CODESPACE_ONLY/__pycache__/
+!labs/lab3/GAME_CODESPACE_ONLY/__pycache__/**
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# -------------------------
+# VS Code
+# -------------------------
+
+.history/
+
+# -------------------------
+# GitHub Codespaces
+# -------------------------
+*.codespace
+*.code-workspace
+
+
+# -------------------------
+# OS-generated files
+# -------------------------
+.DS_Store
+Thumbs.db
+
+!*.pdf
+tempCodeRunnerFile.*
+
+
+*.vsix
+
+# -------------------------
+# Devcontainer and VS Code setup
+# -------------------------
+!.devcontainer/
+!.devcontainer/**
+!.vscode/
+!.vscode/**
+
